@@ -12,10 +12,13 @@
 </head>
 
 <body>
-  hello world!
+  <div id="app">Change it with jQuery</div>
 
   <script>
     SystemJS.config({
+      map: {
+        "jQuery": "node_modules/jquery/dist/jquery.min.js"
+      },
       baseURL: '/',
       packages: {
         '/': {
@@ -24,7 +27,8 @@
       }
     })
 
-    SystemJS.import('/namespaces-and-modules/math/app.js')
+    // SystemJS.import('/namespaces-and-modules/math/app.js')
+    SystemJS.import('app.js')
   </script>
 </body>
 
